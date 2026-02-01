@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency - Explore the World</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-plane-departure"></i> TravelGo</a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; color: white; padding: 8rem 0; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem; color: white;">Explore the World with Us</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem;">Discover new places and create unforgettable memories.</p>
+            <a href="destinations.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">Explore Destinations</a>
+        </div>
+    </header>
+
+    <!-- Popular Destinations Section -->
+    <section class="section" style="padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="destinations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                
+                <!-- Destination Card 1 -->
+                <div class="card" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md);">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Paris" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-content" style="padding: 1.5rem;">
+                        <h3>Paris, France</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">Experience the city of love and lights.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 700; color: var(--primary-color);">$1,200</span>
+                            <a href="booking.html?dest=Paris" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 2 -->
+                <div class="card" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md);">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bali" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-content" style="padding: 1.5rem;">
+                        <h3>Bali, Indonesia</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">Tropical paradise with beautiful beaches.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 700; color: var(--primary-color);">$800</span>
+                            <a href="booking.html?dest=Bali" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 3 -->
+                <div class="card" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md);">
+                    <img src="image1.jpg" alt="Tokyo" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-content" style="padding: 1.5rem;">
+                        <h3>Tokyo, Japan</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">A mix of modern technology and tradition.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 700; color: var(--primary-color);">$1,500</span>
+                            <a href="booking.html?dest=Tokyo" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="destinations.html" class="btn btn-primary">View All Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Packages Highlight -->
+    <section class="section" style="padding: 4rem 0; background-color: white;">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+                
+                <div class="feature-card">
+                    <i class="fas fa-globe-americas" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>Diverse Destinations</h3>
+                    <p style="color: var(--text-light);">We cover over 120 countries worldwide with exclusive access.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-wallet" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>Best Price Guarantee</h3>
+                    <p style="color: var(--text-light);">We offer the best prices for our premium travel packages.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-headset" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>24/7 Support</h3>
+                    <p style="color: var(--text-light);">Our team is available round the clock to assist you.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" style="padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title">What Our Travelers Say</h2>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow-sm);">
+                    <p style="font-style: italic; color: var(--text-light); margin-bottom: 1rem;">"The best travel agency I've ever used. The booking process was seamless and the trip was amazing!"</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">JD</div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">John Doe</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-light);">Traveler</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow-sm);">
+                    <p style="font-style: italic; color: var(--text-light); margin-bottom: 1rem;">"Great prices and excellent customer service. Highly recommended for family vacations."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">JS</div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">Jane Smith</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-light);">Traveler</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow-sm);">
+                    <p style="font-style: italic; color: var(--text-light); margin-bottom: 1rem;">"Unforgettable experience in Bali. Thanks to TravelGo for organizing everything perfectly."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">MR</div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">Mike Ross</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-light);">Traveler</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--text-dark); color: white; padding: 3rem 0; margin-top: auto;">
+        <div class="container">
+            <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                
+                <div>
+                    <h3 style="color: white;">TravelGo</h3>
+                    <p style="color: #9ca3af; margin-bottom: 1rem;">Your trusted partner for exploring the world. We make your travel dreams come true.</p>
+                    <div class="social-links" style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: white;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="color: white;">Quick Links</h4>
+                    <ul style="color: #9ca3af;">
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html">Home</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="destinations.html">Destinations</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="packages.html">Packages</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: white;">Contact Info</h4>
+                    <ul style="color: #9ca3af;">
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i> 123 Travel Street, City, Country</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-envelope"></i> info@travelgo.com</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div style="text-align: center; border-top: 1px solid #374151; margin-top: 2rem; padding-top: 1rem; color: #9ca3af;">
+                <p>&copy; 2026 TravelGo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

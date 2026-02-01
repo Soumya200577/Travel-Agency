@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages - TravelGo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-plane-departure"></i> TravelGo</a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html" class="active">Packages</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header"
+        style="background-color: var(--primary-color); padding: 4rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="color: white; margin-bottom: 0.5rem;">Exclusive Travel Packages</h1>
+            <p>Find the perfect package for your holiday.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding: 4rem 0;">
+        <div class="container">
+
+            <!-- Filters -->
+            <div class="filters-container"
+                style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow-sm); margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+                <h3 style="margin-bottom: 0; margin-right: 1rem;">Filter By:</h3>
+
+                <div class="filter-group">
+                    <label for="priceFilter" style="font-weight: 500; margin-right: 0.5rem;">Max Price:</label>
+                    <select id="priceFilter" style="padding: 0.5rem; border: 1px solid #ddd; border-radius: 0.25rem;">
+                        <option value="all">All</option>
+                        <option value="1000">Under $1000</option>
+                        <option value="2000">Under $2000</option>
+                        <option value="3000">Under $3000</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="durationFilter" style="font-weight: 500; margin-right: 0.5rem;">Duration:</label>
+                    <select id="durationFilter"
+                        style="padding: 0.5rem; border: 1px solid #ddd; border-radius: 0.25rem;">
+                        <option value="all">All</option>
+                        <option value="short">Short (3-5 days)</option>
+                        <option value="medium">Medium (6-9 days)</option>
+                        <option value="long">Long (10+ days)</option>
+                    </select>
+                </div>
+
+                <button id="applyFilters" class="btn btn-primary" style="margin-left: auto;">Apply Filters</button>
+            </div>
+
+            <!-- Packages List -->
+            <div class="packages-grid" id="packagesList"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <!-- Content will be populated by JS or static for now but with IDs for JS targeting -->
+
+                <!-- Package 1 -->
+                <div class="package-card" data-price="1200" data-duration="7"
+                    style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Paris" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-content" style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                        <h3>Paris Romantic Getaway</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">7 Days, 6 Nights - Flights, Hotel,
+                            Tours</p>
+                        <ul style="margin-bottom: 1rem; color: var(--text-dark); font-size: 0.9rem;">
+                            <li><i class="fas fa-check"
+                                    style="color: var(--secondary-color); margin-right: 0.5rem;"></i> 5-Star Hotel
+                                Accommodation</li>
+                            <li><i class="fas fa-check"
+                                    style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Eiffel Tower
+                                Dinner</li>
+                            <li><i class="fas fa-check"
+                                    style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Seine River Cruise
+                            </li>
+                        </ul>
+                        <div
+                            style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                            <span
+                                style="font-weight: 700; font-size: 1.25rem; color: var(--primary-color);">$1,200</span>
+                            <a href="booking.html?package=Paris Getaway" class="btn btn-primary">Book This Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="package-card" data-price="800" data-duration="5"
+                    style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Bali" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-content" style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                        <h3>Bali Beach Retreat</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">5 Days, 4 Nights - Resort, Meals, Spa
+                        </p>
+                        <ul style="margin-bottom: 1rem; color: var(--text-dark); font-size: 0.9rem;">
+                            <li><i class="fas fa-check"
+                                    style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Beachfront Villa
+                            </li>
+                            <li><i class="fas fa-check"
+                                    style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Daily Breakfast &
+                                Dinner</li>
+                            <li><i class="fas fa-check"
+                                    style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Traditional
+                                Massage</li>
+                        </ul>
+                        <div
+                            style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 700; font-size: 1.25rem; color: var(--primary-color);">$800</span>
+                            <a href="booking.html?package=Bali Retreat" class="btn btn-primary">Book This Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="package-card" data-price="2500" data-duration="12"
+                    style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+                    <img src="image1.jpg"
+                        alt="Japan" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-content" style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+                        <h3>Japan Grand Tour</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">12 Days, 11 Nights - Tokyo, Kyoto,
+                            Osaka</p>
+                        <ul style="margin-bottom: 1rem; color: var(--text-dark); font-size: 0.9rem;">
+                            <li><i class="fas fa-check"
+                                    style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Bullet Train Pass
+                            </li>
+                            <li><i class="fas fa-check"
+                                    style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Cultural
+                                Experiences</li>
+                            <li><i class="fas fa-check"
+                                    style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Guided Tours</li>
+                        </ul>
+                        <div
+                            style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                            <span
+                                style="font-weight: 700; font-size: 1.25rem; color: var(--primary-color);">$2,500</span>
+                            <a href="booking.html?package=Japan Grand" class="btn btn-primary">Book This Package</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--text-dark); color: white; padding: 3rem 0; margin-top: auto;">
+        <div class="container">
+            <div style="text-align: center; color: #9ca3af;">
+                <p>&copy; 2026 TravelGo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple Filter Logic embedded for now, can move to script.js if it grows
+        document.addEventListener('DOMContentLoaded', () => {
+            const applyBtn = document.getElementById('applyFilters');
+            const priceFilter = document.getElementById('priceFilter');
+            const durationFilter = document.getElementById('durationFilter');
+            const cards = document.querySelectorAll('.package-card');
+
+            applyBtn.addEventListener('click', () => {
+                const maxPrice = priceFilter.value === 'all' ? Infinity : parseInt(priceFilter.value);
+                const durationType = durationFilter.value;
+
+                cards.forEach(card => {
+                    const price = parseInt(card.dataset.price);
+                    const duration = parseInt(card.dataset.duration);
+                    let durationMatch = false;
+
+                    if (durationType === 'all') durationMatch = true;
+                    else if (durationType === 'short' && duration >= 3 && duration <= 5) durationMatch = true;
+                    else if (durationType === 'medium' && duration >= 6 && duration <= 9) durationMatch = true;
+                    else if (durationType === 'long' && duration >= 10) durationMatch = true;
+
+                    if (price <= maxPrice && durationMatch) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
