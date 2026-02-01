@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - TravelGo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-plane-departure"></i> TravelGo</a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="active btn btn-primary">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header"
+        style="background-color: var(--primary-color); padding: 4rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="color: white; margin-bottom: 0.5rem;">Book Your Trip</h1>
+            <p>Start your journey with us today.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding: 4rem 0;">
+        <div class="container" style="max-width: 800px;">
+            <div class="form-container"
+                style="background: white; padding: 2rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
+                <form id="bookingForm">
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="fullName" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Full
+                            Name</label>
+                        <input type="text" id="fullName" required
+                            style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: inherit;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email
+                                Address</label>
+                            <input type="email" id="email" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: inherit;">
+                        </div>
+                        <div>
+                            <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Phone
+                                Number</label>
+                            <input type="tel" id="phone" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: inherit;">
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="destination"
+                            style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Destination /
+                            Package</label>
+                        <select id="destination" required
+                            style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: inherit;">
+                            <option value="">Select a Destination</option>
+                            <option value="Paris, France">Paris, France</option>
+                            <option value="Bali, Indonesia">Bali, Indonesia</option>
+                            <option value="Tokyo, Japan">Tokyo, Japan</option>
+                            <option value="Dubai, UAE">Dubai, UAE</option>
+                            <option value="London, UK">London, UK</option>
+                            <option value="Cinque Terre, Italy">Cinque Terre, Italy</option>
+                            <option value="Paris Romantic Getaway">Package: Paris Romantic Getaway</option>
+                            <option value="Bali Beach Retreat">Package: Bali Beach Retreat</option>
+                            <option value="Japan Grand Tour">Package: Japan Grand Tour</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label for="date" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Travel
+                                Date</label>
+                            <input type="date" id="date" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: inherit;">
+                        </div>
+                        <div>
+                            <label for="guests" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Number
+                                of Travelers</label>
+                            <input type="number" id="guests" min="1" value="1" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.5rem; font-family: inherit;">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem;">Confirm
+                        Booking</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--text-dark); color: white; padding: 3rem 0; margin-top: auto;">
+        <div class="container">
+            <div style="text-align: center; color: #9ca3af;">
+                <p>&copy; 2026 TravelGo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Pre-fill destination from URL param
+        const urlParams = new URLSearchParams(window.location.search);
+        const dest = urlParams.get('dest');
+        const pkg = urlParams.get('package');
+        const select = document.getElementById('destination');
+
+        if (dest) {
+            // Check if option exists, if not add it temporarily or find close match
+            // Simple match for now
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].value.includes(dest)) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+        if (pkg) {
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].value.includes(pkg)) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
